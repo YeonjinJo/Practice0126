@@ -9,7 +9,8 @@ function App() {
   ];
 
   // TODO: filter를 사용하여 18세 이상의 학생들만 선택하세요.
-  const filteredStudents = students.filter(/* 여기에 코드 작성 */);
+  const filteredStudents = students.filter((element) => element.age >= 18 ? true : false);
+  const mapped = students.map(())
 
   return (
     <div>
