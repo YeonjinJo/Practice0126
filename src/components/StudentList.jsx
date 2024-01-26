@@ -2,9 +2,15 @@
 function StudentList(props) {
   return (
     <>
-      <ul>
-        <li>{props.filteredStudents}</li>
-      </ul>
+      {props.filteredStudents.map((element) => {
+        return (
+          <ul>
+            <li>이름 : {element.name}</li>
+            <li>나이 : {element.age}</li>
+            <li>성적 : {element.grade}</li>
+          </ul>
+        );
+      })}
     </>
   );
 }
