@@ -9,19 +9,19 @@ function App() {
   ];
 
   // TODO: filter를 사용하여 18세 이상의 학생들만 선택하세요.
-  const filteredStudents = students.filter((element) => element.age >= 18 ? true : false);
+  const filteredStudents = students.filter((element) => element.age >= 18);
 
   return (
     <div>
       <h1>학생 목록</h1>
       <ul>
-        filteredStudents.map((element, index) => {
+        {filteredStudents.map((element, index) => {
           return (
             <ul onClick={() => {
-              alert(`나이는 ${student.age}이고, 등급은 ${student.grade}입니다.`)
-            }} key={index}></ul>
+              alert(`나이는 ${element.age}이고, 등급은 ${element.grade}입니다.`)
+            }} key={index}>{element.name}</ul>
           )
-        })
+        })}
         {/* TODO: 학생이름을 클릭하면 나이와 점수가 alert 돼야 해요.*/}
       </ul>
     </div>
